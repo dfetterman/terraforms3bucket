@@ -1,9 +1,9 @@
 resource "aws_security_group" "crypto" {
-  name = "${var.prefix}"
+  name = "${var.Bucketname}"
   tags {
-        Name = "${var.prefix}"
+        Name = "${var.Bucketname}"
   }
-  description = "${var.prefix} SG"
+  description = "${var.Bucketname} SG"
   egress {
     from_port   = 0
     to_port     = 65535 # All outbound traffic
