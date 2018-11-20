@@ -12,11 +12,12 @@ def start_build():
                 'type': 'PLAINTEXT'
             },
             {
-                'name': 'Destroy',
+                'name': 'destroy',
                 'value': 'True',
                 'type': 'PLAINTEXT'
             }
-        ]
+        ],
+        idempotencyToken='string01'
         )
     print(response)    
     return response    
