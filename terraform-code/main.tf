@@ -1,13 +1,7 @@
-provider "aws" {
-  region     = "us-east-1"
-}
 
 
 
-variable "Bucketname" {
-  type = "string"
-  default = "blahblahblah5" # limit 15 characters
-}
+
 
 
 

@@ -17,3 +17,8 @@ variable "prefix" {
 variable "profile" {
   default = "default"
 }
+
+variable "Bucketname" {
+  type = "string"
+  default = "blahblahblah5" # limit 15 characters
+}
