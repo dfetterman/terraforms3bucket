@@ -20,7 +20,7 @@ if destroy == "True":
 else:
     mycommands.extend(["apply"])
 
-mycommands.extend([ "-var", "region="+myregion , "-var", "prefix="+prefix])
+mycommands.extend([ "-var", "region="+myregion , "-var", "prefix="+prefix , "-var", "Bucketname"+Bucketname])
 
 print mycommands
 call(mycommands)
