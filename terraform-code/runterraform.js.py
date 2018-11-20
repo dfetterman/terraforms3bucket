@@ -12,6 +12,7 @@ if len(sys.argv) != 4:
 myregion = sys.argv[1]
 prefix = sys.argv[2]
 destroy = sys.argv[3]
+Bucketname = sys.argv[4]
 
 mycommands = ["terraform"]
 
