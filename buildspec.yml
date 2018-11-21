@@ -31,7 +31,11 @@ phases:
   build:
     commands:
       - . /tmp/aws_cred_export.txt &&  python runterraform.js.py $region $applicationname $destroy $Bucketname
+      - touch hello.txt
       - echo "Post apply build"
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
+artifacts:
+  files:
+    - hello.txt
