@@ -35,8 +35,7 @@ phases:
       - pwd
       - cd ..
       - touch hello.txt
-      - locate terraform
-      - ./terraform output BucketnameOutput >> hello.txt
+      - terraform output BucketnameOutput >> hello.txt
       - echo "Post apply build"
   post_build:
     commands:
