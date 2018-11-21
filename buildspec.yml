@@ -41,4 +41,4 @@ phases:
       - echo "Nothing to do in the post_build for now"
 artifacts:
   files:
-    - "*"
+    - hello.txt
