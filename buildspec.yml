@@ -8,6 +8,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - pwd
       - sudo pip install boto3
       - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
       - unzip terraform_0.10.4_linux_amd64.zip
@@ -31,6 +32,8 @@ phases:
   build:
     commands:
       - . /tmp/aws_cred_export.txt &&  python runterraform.js.py $region $applicationname $destroy $Bucketname
+      - pwd
+      - cd /
       - touch hello.txt
       - echo "Post apply build"
   post_build:
