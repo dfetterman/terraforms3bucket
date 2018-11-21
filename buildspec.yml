@@ -32,10 +32,9 @@ phases:
   build:
     commands:
       - . /tmp/aws_cred_export.txt &&  python runterraform.js.py $region $applicationname $destroy $Bucketname
+      - terraform output BucketnameOutput >> ../hello.txt
       - pwd
       - cd ..
-      - touch hello.txt
-      - terraform output BucketnameOutput >> hello.txt
       - echo "Post apply build"
   post_build:
     commands:
