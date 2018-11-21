@@ -33,7 +33,7 @@ phases:
     commands:
       - . /tmp/aws_cred_export.txt &&  python runterraform.js.py $region $applicationname $destroy $Bucketname
       - ls -lah
-      - terraform output BucketnameOutput | ( read bucketoutput; jq -n --arg bucketname $bucketoutput '{"bucket":$bucketname}' > file.json
+      - terraform output BucketnameOutput | while read bucketoutput; do jq -n --arg bucketname $bucketoutput '{"bucket":$bucketname}' > ../artifacts.json; done
       - pwd
       - cd ..
       - echo "Post apply build"
@@ -42,4 +42,4 @@ phases:
       - echo "Nothing to do in the post_build for now"
 artifacts:
   files:
-    - hello.txt
+    - artifacts.json
