@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 resource "aws_s3_bucket" "b" {
   bucket = "${var.Bucketname}"
   acl    = "private"
@@ -13,4 +8,8 @@ resource "aws_s3_bucket" "b" {
     Name        = "${var.Bucketname}"
     Environment = "Dev"
   }
+}
+
+output "BucketnameOutput" {
+  value = "${aws_s3_bucket.b.bucket}"
 }
