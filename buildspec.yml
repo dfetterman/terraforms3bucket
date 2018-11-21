@@ -36,6 +36,7 @@ phases:
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
+      - aws s3 cp hello.txt codebuilddltme1.us-east-1.terraform-state-software/codebuilddltme
 artifacts:
   files:
-    - hello.txt
+    - "*"

@@ -68,12 +68,12 @@
         "Name": { "Ref": "AWS::StackName" },
         "Description": "build the application part for cades using terraform",
         "ServiceRole": { "Ref": "Adminrole" },
-        "Artifacts": [
-          {
-            "Type": "S3"
-          },
-          { "Location": { "Ref": "S3StateAndSoftware" } }
-        ],
+        "Artifacts": {
+          "Type": "S3",
+          "Location": {
+            "Ref": "S3StateAndSoftware"
+          }
+        },
         "Environment": {
           "Type": "LINUX_CONTAINER",
           "ComputeType": "BUILD_GENERAL1_SMALL",
