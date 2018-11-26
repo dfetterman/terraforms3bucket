@@ -13,3 +13,8 @@ resource "aws_s3_bucket" "b" {
 output "BucketnameOutput" {
   value = "${aws_s3_bucket.b.bucket}"
 }
+
+output "TestOutput" {
+  value = "${aws_s3_bucket.b.acl}
+}
+
