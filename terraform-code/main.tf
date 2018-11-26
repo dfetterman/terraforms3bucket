@@ -15,6 +15,6 @@ output "BucketnameOutput" {
 }
 
 output "TestOutput" {
-  value = "${aws_s3_bucket.b.tags}
+  value = "${var.prefix}
 }
 
