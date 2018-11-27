@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "b" {
 
 
 resource "aws_security_group" "c" {
-  name = "${var.prefix}"
+  name = "${var.Bucketname}"
   tags {
         Name = "${var.prefix}"
   }
