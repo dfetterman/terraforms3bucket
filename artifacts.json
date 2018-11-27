@@ -1,0 +1,12 @@
+{
+    "BucketnameOutput": {
+        "sensitive": false,
+        "type": "string",
+        "value": "mybucket987235aa1"
+    },
+    "SG": {
+        "sensitive": false,
+        "type": "string",
+        "value": "codebuilddltme"
+    }
+}

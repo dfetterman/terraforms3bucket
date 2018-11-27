@@ -19,7 +19,7 @@ def start_build():
         ],
         idempotencyToken='string01'
         )
-    print(response)    
+    #print(response)    
     return response    
 
 
