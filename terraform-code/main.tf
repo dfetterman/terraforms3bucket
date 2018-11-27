@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "b" {
 resource "aws_security_group" "c" {
   name = "${var.Bucketname}"
   tags {
-        Name = "${var.prefix}"
+        Name = "${var.Bucketname}"
   }
   description = "${var.prefix} SG"
   egress {
