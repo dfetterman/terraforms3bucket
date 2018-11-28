@@ -70,9 +70,11 @@ def lambda_handler(event, context):
         print("Build succeeded, getting artifacts")
         artifacts = get_artifacts()
         statusCode = "200"
-
-    if build == "FAILED":
+    elif build == "IN_PROGRESS":
+        statusCode = "200"
+    elif build == "FAILED":
         statusCode = "500"
-
+    else:
+        statusCode = "200"
 
     return response({'status': build, 'artificats': artifacts }, statusCode)
